@@ -20,7 +20,6 @@ export default function BookingPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In real app, send data to server
     alert(`Thank you, ${name}! You booked for ${event.title}.`);
     router.push('/');
   };
@@ -30,6 +29,7 @@ export default function BookingPage() {
       <Header />
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
         <h1 className="text-3xl font-bold mb-4 text-black">{event.title}</h1>
+
         <Image
           src={event.image}
           alt={event.title}
@@ -37,35 +37,39 @@ export default function BookingPage() {
           height={400}
           className="w-full rounded-lg mb-4"
         />
+
         <p className="text-gray-700 mb-2">{event.description}</p>
         <p className="text-sm text-gray-500 mb-6">📅 {event.date}</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Name Input */}
           <div>
             <label className="block font-semibold text-black">Your Name</label>
             <input
               type="text"
-              required
-              className="w-full p-2 border rounded text-black"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full p-2 border rounded text-black"
             />
           </div>
 
+          {/* Email Input */}
           <div>
             <label className="block font-semibold text-black">Email Address</label>
             <input
               type="email"
-              required
-              className="w-full p-2 border rounded text-black"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full p-2 border rounded text-black"
             />
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
           >
             Confirm Booking
           </button>

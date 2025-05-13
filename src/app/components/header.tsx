@@ -7,19 +7,15 @@ export default function Header(){
         className="flex flex-wrap justify-between items-center p-9 bg-gray-800 text-white">
            
             <div className="text-3xl font-bold"><Link href="/">😁 INKOMANE</Link></div>
-            <nav className="flex flex-wrap gap-4 text-sm">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/services">Services</Link>
-                <Link href="/shop">Shop</Link>
-                <Link href="/events">Event List</Link>
-                <Link href="/create-event">Create Event</Link>
-                <Link href="/support">Help</Link>
+            <nav className="flex flex-wrap gap-12 text-2xl">
+                <Link href="/">HOME</Link>
+                <Link href="/about">ABOUT US</Link>
+                <Link href="/shop">GIFT SHOP</Link>
+                <Link href="/events">EVENT LIST</Link>
             </nav>
-            <div className="flex gap-4 text-sm">
-                <Link href="/signin">Sign in</Link>
-                <Link href="/contact">Contact</Link>
-                <Link href="/testimonials">Testimonials</Link>
+            <div className="flex gap-11 text-2xl">
+                <Link href="/signin">SIGN IN</Link>
+                <Link href="/contact">OUR CONTACTS</Link>
             </div>
     </header>
   );

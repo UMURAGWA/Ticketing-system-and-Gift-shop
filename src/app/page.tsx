@@ -83,8 +83,8 @@ export default function Home() {
                 alt="Tech Conference"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/events/MUSIC FESTIVAL">TECH CONFERENCE</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="/events/MUSIC FESTIVAL">Explore the future of technology and innovation</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/events">TECH CONFERENCE</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/events">Explore the future of technology and innovation</Link></p>
             </div>
           </div>
         </section>
