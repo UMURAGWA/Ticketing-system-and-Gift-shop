@@ -1,0 +1,46 @@
+export const events = [
+  {
+    id: 1,
+    title: "APR vs RAYON ⚽",
+    image: "/images/debut.jpg",
+    description: "Book your seat ⚽",
+    date: "2025-06-20",
+    category: "football",
+  },
+  {
+    id: 2,
+    title: "ETINCELLES vs MARINE ⚽",
+    image: "/images/gisenyi.jpg",
+    description: "Gisenyi!",
+    date: "2025-07-15",
+    category: "football",
+  },
+   {
+    id: 3,
+    title: "COLORFULL GENERATION",
+    image: "/images/melodie.jpg",
+    description: "Bruce Melodie perfoming his album!",
+    date: "2025-07-22",
+  },
+  {
+    id: 4,
+    title: "IGISOPE LIVE 🎤",
+    image: "/images/igisope.jpg",
+    description: "Makanyaga Abdul in the house!",
+    date: "2025-08-10",
+  },
+   {
+    id: 5,
+    title: "THE FIRST AND THE FIRST!",
+    image: "/images/juno.jpg",
+    description: "Juno with his first perfomance!",
+    date: "2025-08-10",
+  },
+  {
+    id: 6,
+    title: "TECHSTARS KIGALI",
+    image: "/images/tech.jpg",
+    description: "Explore tech startups and demos.",
+    date: "2025-09-05",
+  },
+];

@@ -14,7 +14,6 @@ export default function Header(){
                 <Link href="/shop">Shop</Link>
                 <Link href="/events">Event List</Link>
                 <Link href="/create-event">Create Event</Link>
-                <Link href="/pricing">Ticket Price</Link>
                 <Link href="/support">Help</Link>
             </nav>
             <div className="flex gap-4 text-sm">

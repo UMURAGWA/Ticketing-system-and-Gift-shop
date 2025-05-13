@@ -44,8 +44,8 @@ export default function Home() {
                 alt="Football"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"> <Link href="/football">RWANDA PREMIER LEAGUE</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="/football">Secure you foootball ticket</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"> <Link href="/events">RWANDA PREMIER LEAGUE</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/events">Secure you foootball ticket</Link></p>
             </div>
 
             {/* Event 2 */}
@@ -57,8 +57,8 @@ export default function Home() {
                 alt="Music Festival"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/Music festival">MUSIC FESTIVAL</ Link></h3>
-              <p className="text-sm text-gray-600"><Link href="/Music festival">Gura itike yawe ibiciro bikiri bito</ Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/events">MUSIC FESTIVAL</ Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/events">Gura itike yawe ibiciro bikiri bito</ Link></p>
             </div>
 
             {/* Event 3 */}
@@ -70,8 +70,8 @@ export default function Home() {
                 alt="Art Expo"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="arts">ART EXPO</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="arts">Discover artworks by Rwandan talents</Link>.</p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/events">ART EXPO</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/events">Discover artworks by Rwandan talents</Link>.</p>
             </div>
 
             {/* Event 4 */}
@@ -83,8 +83,8 @@ export default function Home() {
                 alt="Tech Conference"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="tech">TECH CONFERENCE</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="tech">Explore the future of technology and innovation</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/events/MUSIC FESTIVAL">TECH CONFERENCE</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/events/MUSIC FESTIVAL">Explore the future of technology and innovation</Link></p>
             </div>
           </div>
         </section>
