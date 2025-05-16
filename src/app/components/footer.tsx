@@ -6,7 +6,7 @@ export default function Footer(){
         <div className="flex justify-around flex-wrap">
         <Link href="/">Back to top</Link>
         <Link href="/events">Events</Link>
-        <Link href="/shop">Gift Shop</Link>
+        <Link href="/gift">Gift Shop</Link>
         <Link href="/Sign in">Sign In</Link>
         <Link href="/Our contacts">Our Contacts</Link>
         <Link href="/Our partners">Our Partners</Link>

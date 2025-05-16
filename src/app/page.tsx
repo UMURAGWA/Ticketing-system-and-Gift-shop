@@ -101,8 +101,8 @@ export default function Home() {
                 alt="T-shirt"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"> <Link href="/tshirts">INKOMANE T-Shirts</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="/tshirts">Own an original T-shirt</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"> <Link href="/gift">INKOMANE T-Shirts</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/gift">Own an original T-shirt</Link></p>
             </div>
 
             {/* Product 2 */}
@@ -114,8 +114,8 @@ export default function Home() {
                 alt="Pair of Mugs"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/mugs">ORIGINAL MUGS</ Link></h3>
-              <p className="text-sm text-gray-600"><Link href="/mugs">Buy 5 & get 6</ Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/gift">ORIGINAL MUGS</ Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/gift">Buy 5 & get 6</ Link></p>
             </div>
 
             {/* Product 3 */}
@@ -127,8 +127,8 @@ export default function Home() {
                 alt="Blender"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="arts">SMART BLENDERS</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="arts">Smart Blenders</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/gift">SMART BLENDERS</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/gift">Smart Blenders</Link></p>
             </div>
 
             {/* Product 4 */}
@@ -140,8 +140,8 @@ export default function Home() {
                 alt="Tech Conference"
                 className="rounded"
               />
-              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="tech">CAMERA</Link></h3>
-              <p className="text-sm text-gray-600"><Link href="tech">Get a professional camera</Link></p>
+              <h3 className="text-lg font-semibold mt-2 text-black"><Link href="/gift">CAMERA</Link></h3>
+              <p className="text-sm text-gray-600"><Link href="/gift">Get a professional camera</Link></p>
             </div>
           </div>
         </section>
