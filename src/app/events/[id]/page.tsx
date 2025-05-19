@@ -13,7 +13,7 @@ export default function BookingPage() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [quantity, setQuantity] = useState(1); // 🆕 ticket count
+  const [quantity, setQuantity] = useState(1); 
 
   if (!event) {
     return <div className="p-6 text-red-500">Event not found.</div>;
@@ -22,10 +22,16 @@ export default function BookingPage() {
   const totalPrice = event.price * quantity;
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Thanks, ${name}! You've booked ${quantity} ticket(s) for ${event.title}. Total: $${totalPrice}`);
-    router.push('/');
-  };
+  e.preventDefault();
+
+  if (!name || !email || quantity < 1) {
+    alert("Please fill out all fields correctly.");
+    return;
+  }
+
+  router.push('/checkout');
+};
+
 
   return (
     <main className="p-6">
@@ -84,11 +90,13 @@ export default function BookingPage() {
           </p>
 
           <button
-            type="submit"
-            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          type="submit"
+          className="bg-green-600 text-white px-4 py-2 rounded"
           >
-            Confirm Booking
+          Proceed to Checkout
           </button>
+
+
         </form>
       </div>
     </main>

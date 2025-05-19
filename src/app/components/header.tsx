@@ -26,12 +26,12 @@ export default function Header() {
         {!role && (
           <>
                 <Link href="/">HOME</Link>
-                <Link href="/about">ABOUT US</Link>
+                <Link href="/#about">ABOUT US</Link>
                 <Link href="/gift">GIFT SHOP</Link>
                 <Link href="/events">EVENT LIST</Link>
 
             <div className="flex gap-11 text-2xl">
-                <Link href="/contact">OUR CONTACTS</Link>
+                <Link href="/#contacts">OUR CONTACTS</Link>
             <Link href="/signin" className="underline">SIGN IN</Link>
              </div>
           </>
