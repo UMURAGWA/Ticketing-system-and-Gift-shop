@@ -6,6 +6,8 @@ export const events = [
     description: "Book your seat ⚽",
     date: "2025-06-20",
     category: "football",
+    price: 10, // USD
+
   },
   {
     id: 2,
@@ -14,6 +16,8 @@ export const events = [
     description: "Gisenyi!",
     date: "2025-07-15",
     category: "football",
+    price: 5,
+
   },
    {
     id: 3,
@@ -21,6 +25,8 @@ export const events = [
     image: "/images/melodie.jpg",
     description: "Bruce Melodie perfoming his album!",
     date: "2025-07-22",
+    price: 20,
+
   },
   {
     id: 4,
@@ -28,6 +34,8 @@ export const events = [
     image: "/images/igisope.jpg",
     description: "Makanyaga Abdul in the house!",
     date: "2025-08-10",
+    price: 8,
+
   },
    {
     id: 5,
@@ -35,6 +43,8 @@ export const events = [
     image: "/images/juno.jpg",
     description: "Juno with his first perfomance!",
     date: "2025-08-10",
+    price: 15,
+
   },
   {
     id: 6,
@@ -42,5 +52,7 @@ export const events = [
     image: "/images/tech.jpg",
     description: "Explore tech startups and demos.",
     date: "2025-09-05",
+    price: 2,
+
   },
 ];

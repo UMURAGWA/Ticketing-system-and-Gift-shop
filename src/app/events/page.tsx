@@ -12,7 +12,9 @@ const footballEvents = [
     image: "/images/debut.jpg",
     description: "Book your seat ⚽",
     date: "2025-06-20",
+
   },
+
   {
     id: 2,
     title: "ETINCELLES vs MARINE ⚽",
@@ -61,7 +63,7 @@ const techEvents = [
 export default function EventsPage() {
   const router = useRouter();
 
-  const handleBook = (id: number) => {
+  const handleBook = (id: number,) => {
     router.push(`/events/${id}`);
   };
 
