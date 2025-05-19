@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/app/components/header';
+import CreateEventPage from '../create-event/page';
+import Link from 'next/link';
 
 interface Order {
   id: number;
@@ -107,6 +109,13 @@ export default function StaffOrdersPage() {
           </div>
         )}
       </div>
+      <div className="pt-4">
+            <Link href='create-event'
+              className="bg-blue-600 text-white px-6 py-2 rounded m-10 hover:bg-blue-700"
+            >
+              Create Event
+              </ Link>
+          </div>
     </main>
   );
 }
