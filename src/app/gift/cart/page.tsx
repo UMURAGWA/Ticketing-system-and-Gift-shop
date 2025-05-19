@@ -12,7 +12,11 @@ export default function CartPage() {
   const [total, setTotal] = useState(0);
   const router = useRouter();
 
+<<<<<<< HEAD
   // Load from localStorage if used across pages (optional)
+=======
+  // 🧠 Load from localStorage if used across pages (optional)
+>>>>>>> 7ec8028d6de1f269ddc3cfa052e90d18aacba978
   useEffect(() => {
     const stored = localStorage.getItem('cart');
     if (stored) {
