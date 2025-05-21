@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import Link from "next/link";
+import BackToTop from "./components/backtotop";
 
 export default function Home() {
   return (
@@ -177,10 +178,9 @@ export default function Home() {
     referrerPolicy="no-referrer-when-downgrade">
     </iframe>
   </div>
+        <BackToTop />
+
 </section>
-
-
-
       </main>
     </>
   );

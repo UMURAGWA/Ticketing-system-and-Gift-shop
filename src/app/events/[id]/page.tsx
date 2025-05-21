@@ -5,6 +5,7 @@ import { events } from '../data/events';
 import Image from 'next/image';
 import Header from '../../components/header';
 import { useState } from 'react';
+import BackToTop from '@/app/components/backtotop';
 
 export default function BookingPage() {
   const { id } = useParams();
@@ -13,7 +14,7 @@ export default function BookingPage() {
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [quantity, setQuantity] = useState(1); 
+  const [quantity, setQuantity] = useState(1);
 
   if (!event) {
     return <div className="p-6 text-red-500">Event not found.</div>;
@@ -22,20 +23,30 @@ export default function BookingPage() {
   const totalPrice = event.price * quantity;
 
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  if (!name || !email || quantity < 1) {
-    alert("Please fill out all fields correctly.");
-    return;
-  }
+    if (!name || !email || quantity < 1) {
+      alert("Please fill out all fields correctly.");
+      return;
+    }
 
-  router.push('/checkout');
-};
+    const order = [
+      {
+        title: event.title,
+        quantity,
+        price: event.price,
+      },
+    ];
 
+    localStorage.setItem('order', JSON.stringify(order));
+    localStorage.setItem('orderType', 'event');
+    router.push('/checkout');
+  };
 
   return (
     <main className="p-6">
       <Header />
+      <div className='mb-7'></div>
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
         <h1 className="text-3xl font-bold mb-4 text-black">{event.title}</h1>
         <Image
@@ -47,7 +58,9 @@ export default function BookingPage() {
         />
         <p className="text-gray-700 mb-2">{event.description}</p>
         <p className="text-sm text-gray-500 mb-2">📅 {event.date}</p>
-        <p className="text-md font-medium text-blue-800 mb-4">🎟️ Price per ticket: ${event.price}</p>
+        <p className="text-md font-medium text-blue-800 mb-4">
+          🎟️ Price per ticket: ${event.price}
+        </p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -90,14 +103,13 @@ export default function BookingPage() {
           </p>
 
           <button
-          type="submit"
-          className="bg-green-600 text-white px-4 py-2 rounded"
+            type="submit"
+            className="bg-green-600 text-white px-4 py-2 rounded"
           >
-          Proceed to Checkout
+            Proceed to Checkout
           </button>
-
-
         </form>
+        <BackToTop />
       </div>
     </main>
   );

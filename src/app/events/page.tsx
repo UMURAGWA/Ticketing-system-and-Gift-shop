@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Header from "../components/header";
+import BackToTop from "../components/backtotop";
 
 // Football Events
 const footballEvents = [
@@ -101,6 +102,7 @@ export default function EventsPage() {
   return (
     <main className="p-6">
       <Header />
+      <div className="mb-6"></div>
 
       {/* Intro Section */}
       <header className="grid grid-cols-1 md:grid-cols-3 items-center bg-blue-200 text-white rounded-lg shadow-md p-8 gap-4">
@@ -121,6 +123,7 @@ export default function EventsPage() {
           />
         </div>
       </header>
+      <BackToTop />
 
       {/* Event Sections */}
       {renderSection("RWANDA PREMIER LEAGUE", footballEvents)}

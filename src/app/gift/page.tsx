@@ -4,9 +4,10 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '../components/header';
 import Image from 'next/image';
-import { gifts } from './data/gifts'; // Your gift data file
+import { gifts } from './data/gifts';
+import BackToTop from '../components/backtotop';
 
-// 🧠 Group gift items by category
+// Group gift items by category
 const groupByCategory = (items: any[]) => {
   const categories: { [key: string]: any[] } = {};
   items.forEach((item) => {
@@ -21,10 +22,10 @@ export default function GiftPage() {
   const [search, setSearch] = useState('');
   const [filter, setFilter] = useState('All');
 
-  // ✅ Cart state
+  //  Cart state
   const [cart, setCart] = useState<any[]>([]);
 
-  // ✅ Load cart from localStorage (on first load)
+  //  Load cart from localStorage (on first load)
   useEffect(() => {
     const stored = localStorage.getItem('cart');
     if (stored) {
@@ -32,12 +33,12 @@ export default function GiftPage() {
     }
   }, []);
 
-  // ✅ Save cart to localStorage when it changes
+  //  Save cart to localStorage when it changes
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(cart));
   }, [cart]);
 
-  // ✅ Add to cart logic
+  //  Add to cart logic
   const addToCart = (product: any) => {
     const updatedCart = [...cart];
     const existing = updatedCart.find((item) => item.id === product.id);
@@ -50,10 +51,10 @@ export default function GiftPage() {
     alert(`${product.title} added to cart!`);
   };
 
-  // ✅ Categorize products
+  // Categorize products
   const categories = groupByCategory(gifts);
 
-  // ✅ Reusable section renderer
+  //  Reusable section renderer
   const renderSection = (category: string, items: any[]) => {
     const visibleItems = items.filter(
       (item) =>
@@ -100,11 +101,13 @@ export default function GiftPage() {
   };
 
   return (
-    <main className="p-6">
+    <main className="p-2">
       <Header />
+      <div className="mb-8">  
+      </div>
 
-      {/* 🔍 Search & Category Filter */}
-      <div className="mb-8 flex flex-wrap gap-4 items-center">
+      {/*  Search & Category Filter */}
+      <div className="mb-8 flex flex-wrap gap-10 items-center">
         <input
           type="text"
           value={search}
@@ -125,19 +128,20 @@ export default function GiftPage() {
           ))}
         </select>
 
-        {/* 🛒 View Cart Button */}
+        {/*  View Cart Button */}
         <button
           onClick={() => router.push('/gift/cart')}
           className="ml-auto px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
         >
-          🛒 View Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)})
+           View Cart ({cart.reduce((sum, item) => sum + item.quantity, 0)})
         </button>
       </div>
 
-      {/* 🧾 Render each section */}
+      {/*  Render each section */}
       {Object.entries(categories).map(([category, items]) =>
         renderSection(category, items)
       )}
+      <BackToTop />
     </main>
   );
 }

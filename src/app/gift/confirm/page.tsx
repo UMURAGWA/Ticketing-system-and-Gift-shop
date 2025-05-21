@@ -1,83 +1,28 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Header from '@/app/components/header';
+import Link from 'next/link';
 
-export default function ConfirmPage() {
-  const [order, setOrder] = useState<any[] | null>(null);
-  const [total, setTotal] = useState(0);
-  const router = useRouter();
-
- useEffect(() => {
-  const orderData = localStorage.getItem('order');
-  console.log("🛒 Fetched order from localStorage:", orderData);
-
-  if (orderData) {
-    const parsed = JSON.parse(orderData);
-    setOrder(parsed);
-
-    const subtotal = parsed.reduce(
-      (sum: number, item: any) => sum + item.price * item.quantity,
-      0
-    );
-    setTotal(subtotal);
-  } else {
-    console.warn("❌ No order found in localStorage");
-    setOrder([]); // fallback to show no order message
-  }
-}, []);
-
-
+export default function GiftConfirmPage() {
   return (
-    <main className="p-6">
+    <main className="p-6 min-h-screen bg-white">
       <Header />
+      <div className="max-w-xl mx-auto mt-10 bg-green-50 border border-green-400 p-6 rounded-lg text-center">
+        <h1 className="text-3xl font-bold text-green-700 mb-4">🎉 Order Confirmed!</h1>
+        <p className="text-black mb-2">
+          Thank you for your order from the <strong>Gift Shop</strong>.
+        </p>
+        <p className="text-2xl text-black mb-4">
+          A confirmation has been sent to your email.
+        </p>
+        
 
-      <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6 text-center">
-        {order === null ? (
-          <p className="text-gray-600">Loading your order...</p>
-        ) : order.length === 0 ? (
-          <>
-            <h2 className="text-xl font-semibold text-red-500 mb-4">
-              ❌ No order was found.
-            </h2>
-            <button
-              onClick={() => router.push('/gift')}
-              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              🔁 Back to Gift Shop
-            </button>
-          </>
-        ) : (
-          <>
-            <h1 className="text-3xl font-bold text-green-700 mb-4">
-              🎉 Order Confirmed!
-            </h1>
-            <p className="text-gray-700 mb-6">
-              Thank you for your purchase! Here's your order summary:
-            </p>
-
-            <ul className="text-left mb-6">
-              {order.map((item) => (
-                <li key={item.id} className="mb-2">
-                  <span className="font-semibold text-black">{item.title}</span>{' '}
-                  × {item.quantity} — ${item.price * item.quantity}
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="text-xl font-bold text-black mb-4">
-              Total Paid: ${total.toFixed(2)}
-            </h2>
-
-            <button
-              onClick={() => router.push('/gift')}
-              className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-            >
-              🛍 Back to Shop
-            </button>
-          </>
-        )}
+        <Link
+          href="/gift"
+          className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+        >
+          Back to Gift Shop
+        </Link>
       </div>
     </main>
   );

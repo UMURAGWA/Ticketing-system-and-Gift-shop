@@ -11,11 +11,11 @@ export default function RoleLoginPage() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  // ✅ Correct roles: admin, staff, customer
+  //  Correct roles: admin, staff, customer
   const users = [
     { username: 'admin', password: 'admin123', role: 'admin' },
     { username: 'staff', password: 'staff123', role: 'staff' },
-    { username: 'customer', password: 'user123', role: 'customer' }, // ✅ role must match URL
+    { username: 'customer', password: 'user123', role: 'customer' }, 
   ];
 
   const handleLogin = (e: React.FormEvent) => {

@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Header from '@/app/components/header';
+import NewDashboard from './dashboard';
 
 export default function AdminDashboard() {
   const router = useRouter();
@@ -19,7 +20,7 @@ export default function AdminDashboard() {
     <main className="min-h-screen bg-gray-50">
       <Header />
       <div className="max-w-5xl mx-auto py-10 px-6">
-        <h1 className="text-3xl font-bold text-black mb-6">🛠 Admin Dashboard</h1>
+        <h1 className="text-3xl font-bold text-black mb-6">🛠 Admin Dashboard (April)</h1>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white shadow-md rounded-lg p-6">
@@ -44,7 +45,12 @@ export default function AdminDashboard() {
             <li>👤 New staff account created</li>
           </ul>
         </section>
+        <NewDashboard />
       </div>
     </main>
   );
 }
+
+
+
+
