@@ -118,8 +118,6 @@ Credentials are simulated in frontend only.
 
 ## 📸 Screenshots
 
-> Replace these with actual screenshots:
-
 - ![Home Page](public/images/Screenshot-home.jpg)
 - ![Event Booking](public/images/Screenshot-event.jpg)
 - ![Sign in](public/images/Screenshot-signin.jpg)
